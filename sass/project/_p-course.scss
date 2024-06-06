@@ -1,0 +1,135 @@
+@use "../global/" as g;
+
+.p-course-head {
+  text-align: center;
+  @include g.mq(sm) {
+    font-size: g.$fz-sm;
+    line-height: 1.65;
+  }
+}
+
+.p-course__sub-title {
+  font-weight: 700;
+}
+
+.p-course__title {
+  margin-top: clamp(1.2rem, 0.305rem + 2.295vw, 2.6rem);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: clamp(1.2rem, 0.478rem + 1.852vw, 1.9rem);
+  font-size: g.$fz-xl;
+  font-weight: 900;
+  line-height: 1.2;
+  @include g.mq(sm) {
+    font-size: g.$fz-lg;
+  }
+  img {
+    width: clamp(18.9rem, 6.829rem + 30.952vw, 30.6rem);
+  }
+}
+
+.p-course__description {
+  margin-top: 2.6rem;
+  font-size: clamp(1.5rem, 0.967rem + 0.694vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.p-course-about {
+  margin-top: clamp(3.9rem, 3.452rem + 1.148vw, 4.6rem);
+
+  display: flex;
+  gap: clamp(1.6rem, 0.685rem + 2.346vw, 3.5rem);
+  @include g.mq(sm) {
+    flex-direction: column;
+    align-items: center;
+  }
+  div {
+    background-color: g.$color-white;
+    border-radius: 1rem;
+    width: clamp(24.8rem, 23.562rem + 3.175vw, 26rem);
+    height: clamp(6.6rem, 3.195rem + 8.73vw, 9.9rem);
+    padding: 1.2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.65;
+    @include g.mq(sm) {
+      font-size: g.$fz-xs;
+    }
+  }
+}
+
+.p-course-body {
+  margin-top: 7.95rem;
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.p-course-body__title {
+  border-top: 1px solid g.$color-gray;
+  padding-top: 1.05rem;
+  width: 13.5rem;
+  font-weight: 700;
+  line-height: 2.1;
+}
+
+.p-course-info-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.p-course-info {
+  width: 48rem;
+  display: flex;
+  padding-top: 1.05rem;
+  gap: 3.6rem;
+
+  border-top: 1px solid g.$color-gray;
+}
+
+.p-course-info__title {
+  font-weight: 700;
+  line-height: 2.1;
+  padding-left: 0.9rem;
+  position: relative;
+  height: fit-content;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: g.$color-purple;
+  }
+}
+
+.p-course-info__list {
+  li {
+    line-height: 2.1;
+    position: relative;
+    padding-left: 1.2rem;
+    &::before {
+      position: absolute;
+      content: "-";
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: g.$color-purple;
+    }
+  }
+}
+
+.p-course__btn {
+  margin-top: clamp(5.6rem, 0.303rem + 6.897vw, 7.2rem);
+  text-align: center;
+}

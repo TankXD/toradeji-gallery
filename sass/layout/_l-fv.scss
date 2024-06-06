@@ -1,0 +1,27 @@
+@use "../global/" as g;
+
+.l-fv {
+  width: 100%;
+  height: clamp(47.3rem, 32.787rem + 37.213vw, 70rem);
+  background: url(../img/bg/fv-bg-sp.png) no-repeat top center / cover;
+  @include g.mq(md) {
+    background: url(../img/bg/fv-bg-pc.png) no-repeat top center / cover;
+  }
+
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(0, #222 14.58%, rgba(34, 34, 34, 0) 84.9%);
+    height: clamp(15.7rem, 9.882rem + 14.918vw, 24.8rem);
+  }
+}
+
+.l-fv__inner {
+  margin-inline: auto;
+  max-width: calc(g.$section-width + 1.9rem * 2);
+  padding-inline: 1.9rem;
+  padding-top: clamp(8.6rem, 3.677rem + 12.623vw, 16.3rem);
+}

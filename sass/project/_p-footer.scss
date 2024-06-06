@@ -1,0 +1,106 @@
+@use "../global/" as g;
+
+.p-footer-head {
+}
+
+.p-footer__logo {
+  @include g.mq(sm) {
+    text-align: center;
+  }
+}
+
+.p-footer__sns {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.6rem;
+
+  @include g.mq(sm) {
+    margin-top: 3.4rem;
+    gap: 4.8rem;
+    justify-content: center;
+  }
+
+  img {
+    @include g.mq(sm) {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+    transition: opacity 0.3s;
+  }
+  a:hover {
+    img {
+      opacity: 0.8;
+    }
+  }
+}
+
+.p-footer-body {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6.4rem, 5.471rem + 2.381vw, 7.3rem);
+  max-width: 47.6rem;
+  margin-inline: auto;
+  @include g.mq(sm) {
+    margin-top: 4.8rem;
+  }
+}
+
+.p-footer__nav {
+  padding-inline: 0.1rem;
+  @include g.mq(sm) {
+    padding-inline: 0.3rem;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 5.31rem;
+    row-gap: 2.5rem;
+    column-gap: 4rem;
+    @include g.mq(sm) {
+      flex-direction: row;
+      row-gap: 2.4rem;
+      column-gap: 3.2rem;
+      height: auto;
+      justify-content: center;
+    }
+  }
+  li:first-of-type {
+    @include g.mq(lg) {
+      margin-right: 3rem;
+    }
+  }
+  li {
+    color: g.$color-l-gray;
+    font-size: g.$fz-sm;
+    font-weight: 700;
+    @include g.mq(sm) {
+      font-size: g.$fz-xs;
+      line-height: 14px;
+    }
+    transition: 0.3s opacity;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.p-footer__description {
+  color: g.$color-l-gray;
+  font-size: g.$fz-xs;
+  line-height: 1.65;
+}
+
+.p-footer__copyright {
+  text-align: center;
+  margin-top: 3.2rem;
+  color: g.$color-l-gray;
+
+  font-size: g.$fz-xs;
+
+  line-height: 14px;
+  @include g.mq(sm) {
+    margin-top: 2.4rem;
+  }
+}

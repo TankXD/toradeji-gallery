@@ -1,0 +1,23 @@
+@use "../global/" as g;
+
+.l-header {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  z-index: g.$z-index-header;
+}
+
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+  max-width: calc(g.$header-width + 2rem * 2);
+  margin-inline: auto;
+
+  height: 7.5rem;
+  @include g.mq(md) {
+    height: 8rem;
+  }
+}

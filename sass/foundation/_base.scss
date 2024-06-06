@@ -1,0 +1,13 @@
+@use "../global/" as g;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: g.$font-famliy;
+  color: g.$color-black;
+  font-size: g.$fz-md;
+  font-weight: 400;
+  line-height: 1;
+  overflow-x: hidden;
+}

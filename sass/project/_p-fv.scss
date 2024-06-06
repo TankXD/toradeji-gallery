@@ -1,0 +1,30 @@
+@use "../global/" as g;
+
+.p-fv__content {
+}
+
+.p-fv__sub-title--top {
+  color: g.$color-white;
+
+  font-size: g.$fz-subtitle-1;
+  font-weight: 900;
+}
+
+.p-fv__title {
+  margin-top: clamp(1.8rem, 1.161rem + 1.639vw, 2.8rem);
+  img {
+    width: clamp(29.2rem, 8.869rem + 52.131vw, 61rem);
+  }
+}
+
+.p-fv__sub-title--bottom {
+  margin-top: clamp(2.2rem, 0.793rem + 3.607vw, 4.4rem);
+  color: g.$color-white;
+
+  font-size: g.$fz-subtitle-2;
+  font-weight: 700;
+  line-height: 165%;
+}
+
+.u-is-hidden-md {
+}

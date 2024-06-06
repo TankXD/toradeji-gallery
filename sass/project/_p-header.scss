@@ -1,0 +1,90 @@
+@use "../global/" as g;
+
+.p-header__logo {
+}
+
+.p-header-nav {
+  display: none;
+  @include g.mq(lg) {
+    display: flex;
+  }
+}
+
+.p-header-nav__list {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  li {
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(0.7rem);
+    }
+
+    a {
+      font-weight: inherit;
+    }
+  }
+  li:last-of-type {
+    margin-left: 0.2rem;
+  }
+}
+
+.p-header-drawer__btn {
+  z-index: calc(g.$z-index-header + 1);
+  @include g.mq(lg) {
+    display: none;
+  }
+}
+.p-drawer {
+  position: fixed;
+  z-index: g.$z-index-header;
+  width: 39rem;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(34, 34, 34, 0.75);
+  transform: translateX(100%);
+  transition: transform 0.5s;
+  &.is-open {
+    transform: translateX(0);
+    @include g.mq(lg) {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.p-drawer__list {
+  padding: 9rem 3.4rem 5.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  li {
+    a {
+      color: g.$color-l-gray;
+      font-weight: 700;
+    }
+  }
+}
+
+// scroll中スタイル
+
+.l-header.is-scrolling {
+  transition: 0.3s ease;
+  background-color: rgba(100, 100, 100, 0.7);
+  // background-color: #646464;
+  // opacity: 0.7;
+  .p-header__logo img {
+    filter: invert(100%) sepia(64%) saturate(170%) hue-rotate(235deg) brightness(112%) contrast(84%);
+    transition: 0.4s ease;
+  }
+  .p-header-nav__list {
+    color: g.$color-l-gray;
+    transition: 0.5s ease;
+  }
+  .c-btn--black {
+    transition: 0.5s ease;
+    color: g.$color-black;
+    background-color: g.$color-l-gray;
+  }
+}

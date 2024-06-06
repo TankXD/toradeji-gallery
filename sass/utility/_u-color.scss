@@ -1,0 +1,51 @@
+@use "../global/" as g;
+
+.bg-purple {
+  background-color: g.$color-purple;
+  color: g.$color-l-gray;
+  // border-color: transparent;
+}
+
+.bg-pink {
+  background-color: g.$color-tag-pink;
+  color: g.$color-l-gray;
+  // border-color: transparent;
+}
+
+.bg-green {
+  background-color: g.$color-tag-green;
+  color: g.$color-l-gray;
+  // border-color: transparent;
+}
+
+.bg-blue {
+  background-color: g.$color-tag-blue;
+  color: g.$color-l-gray;
+  // border-color: transparent;
+}
+
+.bg-orange {
+  background-color: g.$color-tag-orange;
+  color: g.$color-l-gray;
+  // border-color: transparent;
+}
+
+.bg-gray {
+  background-color: g.$color-tag-gray;
+  color: g.$color-l-gray;
+  // border-color: transparent;
+}
+
+.cl-pink {
+  color: g.$color-tag-pink;
+}
+.cl-green {
+  color: g.$color-tag-green;
+}
+.cl-blue {
+  color: g.$color-tag-blue;
+}
+
+.cl-orange {
+  color: g.$color-tag-orange;
+}

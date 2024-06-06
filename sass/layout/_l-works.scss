@@ -1,0 +1,13 @@
+@use "../global/" as g;
+
+.l-works {
+  margin-top: clamp(9.3rem, 5.678rem + 9.659vw, 19.2rem);
+}
+
+.l-works__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: clamp(7rem, 4.143rem + 7.327vw, 14.4rem);
+}

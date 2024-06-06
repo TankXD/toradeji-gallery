@@ -1,0 +1,9 @@
+// mixin
+@use "sass:map";
+@use "./variable" as g;
+
+@mixin mq($key: md) {
+  @media #{map.get(g.$breakpoints,$key)} {
+    @content;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../global/" as g;
+
+.l-swiper {
+  margin-top: -15.7rem;
+  @include g.mq(lg) {
+    margin-top: -22.4rem;
+  }
+}
+
+.l-swiper__inner {
+}

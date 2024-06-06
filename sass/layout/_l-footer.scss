@@ -1,0 +1,25 @@
+@use "../global/" as g;
+
+.l-footer {
+  background-color: g.$color-black;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  @include g.mq(sm) {
+    padding-top: 5.5rem;
+    padding-bottom: 4.2rem;
+  }
+}
+
+.l-footer__inner {
+  max-width: g.$section-width;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  @include g.mq(sm) {
+    flex-direction: column;
+    justify-content: none;
+    gap: 0;
+    // align-items: center;
+  }
+}

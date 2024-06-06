@@ -1,0 +1,175 @@
+@use "../global/" as g;
+
+.c-btn {
+  color: g.$color-l-gray;
+  border: 1px solid #ebebeb;
+  background: #222;
+  display: inline-block;
+}
+
+.c-btn--black {
+  display: inline-block;
+  color: g.$color-l-gray;
+  font-weight: 700;
+  padding: 1.1rem 4.1rem 1.2rem 4.2rem;
+  background-color: g.$color-black;
+  border-radius: 30px;
+  transition: 0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.c-btn--category {
+  color: g.$color-l-gray;
+  font-size: g.$fz-lg;
+  font-weight: 700;
+  line-height: 0.875;
+  border-radius: 20px;
+  border: 1px solid g.$color-l-gray;
+  display: inline-block;
+  padding: 1.2rem 3.9rem;
+  transition: 0.3s ease;
+  white-space: nowrap;
+  &.is-active {
+    border-color: transparent;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  @include g.mq(md) {
+    font-size: clamp(1.3rem, 0.935rem + 0.475vw, 1.6rem);
+  }
+}
+
+.c-btn--tag {
+  color: g.$color-l-gray;
+  font-size: g.$fz-lg;
+  font-weight: 700;
+  line-height: 0.875;
+  display: inline-block;
+  border-radius: 2rem;
+  border: 1px solid g.$color-l-gray;
+  padding: 1.2rem 2.4rem;
+  white-space: nowrap;
+
+  &.is-active {
+    border-color: transparent;
+  }
+  transition: 0.3s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include g.mq(md) {
+    font-size: clamp(1.3rem, 0.935rem + 0.475vw, 1.6rem);
+  }
+}
+
+.c-btn--filter {
+  padding-block: 1.3rem;
+  padding-inline: 4rem calc(4rem + 1.2rem + 1.6rem);
+  border-radius: 2rem;
+  font-size: g.$fz-lg;
+  font-weight: 700;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url("../img/icon/zoom.svg") no-repeat center center/ contain;
+  }
+}
+
+.c-btn--arrow {
+  display: inline-block;
+  padding-block: 1.6rem;
+  padding-left: 6.6rem;
+  width: 250px;
+  border-radius: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  text-align: left;
+  transition: 0.3s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.6rem;
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url("../img/icon/arrow-bottom.svg") no-repeat center center / contain;
+  }
+}
+
+.c-btn-drawer {
+  display: inline-block;
+  width: 4.8rem;
+  height: 2.7rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: g.$color-black;
+    transition: all 0.3s;
+    pointer-events: none;
+    &::before,
+    &::after {
+      transition: all 0.3s;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      content: "";
+      background-color: g.$color-black;
+      left: 0;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+.c-btn-drawer.is-open .line {
+  background-color: transparent;
+  &::before {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: g.$color-l-gray;
+  }
+  &::after {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+    background-color: g.$color-l-gray;
+  }
+}
+
+.c-btn-more {
+  font-weight: 700;
+  padding: 1.6rem 1rem 1.7rem;
+  text-align: center;
+  width: 24.8rem;
+  border-radius: 30px;
+  display: inline-block;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.c-btn-more--purple {
+  background-color: g.$color-purple;
+  color: g.$color-l-gray;
+}

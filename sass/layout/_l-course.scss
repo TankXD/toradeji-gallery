@@ -1,0 +1,33 @@
+@use "../global/" as g;
+
+.l-course {
+  background-color: g.$color-l-gray;
+  background: url(../img/course/course-bg.png) center center / cover no-repeat;
+  background-blend-mode: multiply;
+  overflow-x: hidden;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // width: calc(100% - 12.25rem * 2);
+    height: calc(100% - 5rem * 2);
+    width: 119.5rem;
+    background: url(../img/course/bg-mark.png) center center / cover no-repeat;
+    @include g.mq(sm) {
+      height: calc(100% - 3.19rem * 2);
+      width: 100%;
+    }
+  }
+}
+
+.l-course__inner {
+  max-width: calc(g.$section-width-sm + 6rem * 2);
+  padding-inline: 6rem;
+  padding-top: clamp(5.3rem, 3.949rem + 3.465vw, 8.8rem);
+  padding-bottom: clamp(7.2rem, 4.265rem + 7.525vw, 14.8rem);
+  margin-inline: auto;
+  position: relative;
+}

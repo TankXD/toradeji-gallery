@@ -1,0 +1,49 @@
+// - color - //
+// font color
+$color-black: #222222;
+$color-gray: #6b6b6b;
+$color-l-gray: #ebebeb;
+$color-white: #fff;
+// point color
+$color-purple: #9f28fb;
+$color-pink: #f47b82;
+// tag color
+$color-tag-green: #18be64;
+$color-tag-blue: #569aff;
+$color-tag-pink: #ef6bab;
+$color-tag-orange: #ee933e;
+$color-tag-gray: #727272;
+
+// - font - //
+// font family
+$font-famliy: "Noto Sans JP", sans-serif;
+
+// font size
+$fz-subtitle-1: clamp(1.4rem, 0.822rem + 1.481vw, 2.6rem);
+$fz-subtitle-2: clamp(1.2rem, 1.007rem + 0.494vw, 1.6rem);
+$fz-xl: 1.8rem;
+$fz-lg: 1.6rem;
+$fz-md: 1.5rem; // base font size
+$fz-sm: 1.4rem;
+$fz-xs: 1.3rem;
+$fz-xxs: 1.2rem;
+
+// - inner - //
+$header-width: 100rem;
+$section-width: clamp(60rem, 20rem + 57.143vw, 100rem);
+$section-width-sm: clamp(50rem, 27.623rem + 57.377vw, 85rem);
+
+// - padding-inline - //
+$padding-inline-main: 3.9rem;
+
+// - break point - //
+$breakpoints: (
+  sm: "not screen and (min-width: 768px)",
+  md: "screen and (min-width: 768px)",
+  lg: "screen and (min-width: 1000px)",
+  xl: "screen and (min-width: 1200px)",
+  xxl: "screen and (min-width: 1400px)",
+) !default;
+
+// - z-index - //
+$z-index-header: 100;

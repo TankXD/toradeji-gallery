@@ -1,0 +1,18 @@
+@use "../global/" as g;
+
+.l-about {
+  margin-top: clamp(8.7rem, 6.207rem + 6.393vw, 12.6rem);
+}
+
+.l-about__inner {
+  max-width: calc(g.$section-width-sm + g.$padding-inline-main * 2);
+  padding-inline: g.$padding-inline-main;
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 1.567rem + 6.238vw, 10.3rem);
+  @include g.mq(lg) {
+    flex-direction: row;
+  }
+}

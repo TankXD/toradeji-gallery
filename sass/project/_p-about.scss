@@ -1,0 +1,25 @@
+@use "../global/" as g;
+.p-about__head {
+  flex-shrink: 0;
+  img {
+    width: clamp(18.2rem, 7.715rem + 26.885vw, 34.6rem);
+  }
+}
+
+.p-about__body {
+  //   width: clamp(31.2rem, 26.915rem + 10.988vw, 40.1rem);
+  max-width: 50rem;
+  margin-left: auto;
+
+  @include g.mq(lg) {
+    margin-left: 0;
+    margin-top: 24.1rem;
+  }
+}
+
+.p-about__description {
+  color: g.$color-l-gray;
+  font-size: clamp(g.$fz-md, 1.308rem + 0.492vw, g.$fz-xl);
+  font-weight: 700;
+  line-height: 210%;
+}
